@@ -1,0 +1,38 @@
+{
+  "carvers": {
+    "air": "remix:sample_cave"
+  },
+  "downfall": 0.0,
+  "effects": {
+    "fog_color": 1186057,
+    "foliage_color": 4477507,
+    "grass_color": 4477507,
+    "sky_color": 1186057,
+    "water_color": 342306,
+    "water_fog_color": 332810
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "remix:adamantium_ore"
+    ]
+  ],
+  "has_precipitation": false,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 0.8
+}

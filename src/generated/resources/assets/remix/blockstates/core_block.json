@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "remix:block/core_block_off"
+    },
+    "lit=true": {
+      "model": "remix:block/core_block_on"
+    }
+  }
+}

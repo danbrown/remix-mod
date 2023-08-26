@@ -1,0 +1,8 @@
+// 1.20.1	2023-08-26T04:41:37.428881	Remix Block Tags
+01ae7163466c52da5377e378b050a6856d1f7a2f data/forge/tags/blocks/ores.json
+f4247fac2af89c609280b54dd90ce0513d4ef4f0 data/forge/tags/blocks/ores/adamantium.json
+683ab5ca486ee9afba2b781d62d86beebda1a154 data/forge/tags/blocks/storage_blocks/adamantium.json
+1d453117eecb973e298e71c12cf692d1fb4a1241 data/forge/tags/blocks/storage_blocks/adamantium_debris.json
+605cdbea7c4204a90df8b3f3afb401f2e9acc51a data/minecraft/tags/blocks/mineable/pickaxe.json
+1ade345e70ddcd01882368cf0b23a9b16588c2ef data/minecraft/tags/blocks/needs_diamond_tool.json
+7ed5b73d9580440d9e51fdb66649ded51e72dc11 data/minecraft/tags/blocks/needs_iron_tool.json

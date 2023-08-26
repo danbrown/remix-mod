@@ -1,0 +1,14 @@
+// 1.20.1	2023-08-26T04:41:37.428182	Remix Block States
+81a87a1a16a7f2e83d5896ddaeb801bb80c09372 assets/remix/blockstates/adamantium_block.json
+d740e81b43a74e7c42993b088eb581462d7b66f5 assets/remix/blockstates/adamantium_debris.json
+cec6f16b17c8d9ce86aaf155b527b61dbf028c9b assets/remix/blockstates/adamantium_ore.json
+b923f643c8449e0a369f80606a8174e6e13e6e77 assets/remix/blockstates/core_block.json
+a9df1e4b6b2e389c03d1f6925d3123186c1add6d assets/remix/blockstates/deepslate_adamantium_ore.json
+ff3f0afa63b07148b7cd94ce469d444fb656e962 assets/remix/blockstates/jump_block.json
+b6d331abecf5cab9d35442e95cf6974e6a0d434b assets/remix/models/block/adamantium_block.json
+9920c547662fc0d86d9cf9d234fea7bade034669 assets/remix/models/block/adamantium_debris.json
+e7fd777293113ea357bdf9b6ccdd902a613b49f0 assets/remix/models/block/adamantium_ore.json
+0e59ce58f97af2cde57fc41c381cbfebae88fac0 assets/remix/models/block/core_block_off.json
+61b0ede7f24e4943fbae4a35bd26fbb51a7346ac assets/remix/models/block/core_block_on.json
+4fa474e84b5e2b944e00df6d0ea1474eb1093c93 assets/remix/models/block/deepslate_adamantium_ore.json
+778eb927f2815054856e4ef0d2ea148c1d6e4d40 assets/remix/models/block/jump_block.json

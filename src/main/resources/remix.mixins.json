@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "remix.refmap.json",
+  "mixins": [
+    "ExampleMixin",
+    "EntityMixin",
+    "ThrownTridentMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

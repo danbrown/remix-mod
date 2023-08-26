@@ -1,0 +1,207 @@
+{
+  "type": "remix:sampledim",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "remix:custom_biome_1",
+          "parameters": {
+            "continentalness": 0.0,
+            "depth": -2.0,
+            "erosion": 0.0,
+            "humidity": 0.0,
+            "offset": 0.0,
+            "temperature": 0.0,
+            "weirdness": 0.0
+          }
+        },
+        {
+          "biome": "remix:custom_biome_1",
+          "parameters": {
+            "continentalness": -0.9,
+            "depth": -2.0,
+            "erosion": -0.7,
+            "humidity": -0.4,
+            "offset": 0.0,
+            "temperature": -1.0,
+            "weirdness": 0.0
+          }
+        },
+        {
+          "biome": "remix:custom_biome_1",
+          "parameters": {
+            "continentalness": 0.0,
+            "depth": -2.0,
+            "erosion": 0.0,
+            "humidity": 0.0,
+            "offset": 0.0,
+            "temperature": 1.0,
+            "weirdness": 0.0
+          }
+        },
+        {
+          "biome": "remix:custom_biome_1",
+          "parameters": {
+            "continentalness": 0.0,
+            "depth": -2.0,
+            "erosion": 0.0,
+            "humidity": -0.4,
+            "offset": 0.0,
+            "temperature": 0.0,
+            "weirdness": 0.0
+          }
+        },
+        {
+          "biome": "remix:custom_biome_1",
+          "parameters": {
+            "continentalness": 0.0,
+            "depth": -2.0,
+            "erosion": 0.0,
+            "humidity": 0.4,
+            "offset": 0.0,
+            "temperature": 1.0,
+            "weirdness": 0.0
+          }
+        },
+        {
+          "biome": "remix:custom_biome_1",
+          "parameters": {
+            "continentalness": 0.9,
+            "depth": -2.0,
+            "erosion": 0.0,
+            "humidity": 0.0,
+            "offset": 0.0,
+            "temperature": 0.0,
+            "weirdness": 0.0
+          }
+        },
+        {
+          "biome": "remix:custom_biome_1",
+          "parameters": {
+            "continentalness": 0.0,
+            "depth": -2.0,
+            "erosion": 0.7,
+            "humidity": 0.0,
+            "offset": 0.0,
+            "temperature": 0.0,
+            "weirdness": 0.0
+          }
+        },
+        {
+          "biome": "remix:custom_biome_1",
+          "parameters": {
+            "continentalness": 0.0,
+            "depth": -2.0,
+            "erosion": 1.0,
+            "humidity": 0.0,
+            "offset": 0.0,
+            "temperature": 0.0,
+            "weirdness": 0.0
+          }
+        },
+        {
+          "biome": "remix:custom_biome_1",
+          "parameters": {
+            "continentalness": 0.0,
+            "depth": -2.0,
+            "erosion": 0.0,
+            "humidity": 0.0,
+            "offset": 0.0,
+            "temperature": 0.0,
+            "weirdness": 1.0
+          }
+        },
+        {
+          "biome": "remix:custom_biome_1",
+          "parameters": {
+            "continentalness": 0.0,
+            "depth": -2.0,
+            "erosion": 0.0,
+            "humidity": 0.0,
+            "offset": 0.0,
+            "temperature": 1.0,
+            "weirdness": 1.0
+          }
+        },
+        {
+          "biome": "remix:custom_biome_1",
+          "parameters": {
+            "continentalness": 0.0,
+            "depth": -2.0,
+            "erosion": 0.0,
+            "humidity": 0.0,
+            "offset": 0.0,
+            "temperature": 0.0,
+            "weirdness": -1.0
+          }
+        },
+        {
+          "biome": "remix:custom_biome_1",
+          "parameters": {
+            "continentalness": 0.0,
+            "depth": -2.0,
+            "erosion": 0.7,
+            "humidity": 0.0,
+            "offset": 0.0,
+            "temperature": 0.0,
+            "weirdness": -1.0
+          }
+        },
+        {
+          "biome": "remix:ancient_sea",
+          "parameters": {
+            "continentalness": [
+              0.0,
+              0.9
+            ],
+            "depth": 2.0,
+            "erosion": 0.0,
+            "humidity": [
+              0.0,
+              0.4
+            ],
+            "offset": 0.0,
+            "temperature": [
+              0.0,
+              1.0
+            ],
+            "weirdness": [
+              -1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "biome": "remix:ancient_sea",
+          "parameters": {
+            "continentalness": 0.0,
+            "depth": 2.0,
+            "erosion": [
+              0.7,
+              1.0
+            ],
+            "humidity": 0.0,
+            "offset": 0.0,
+            "temperature": 0.0,
+            "weirdness": 0.0
+          }
+        },
+        {
+          "biome": "remix:ancient_sea",
+          "parameters": {
+            "continentalness": -0.7,
+            "depth": 2.0,
+            "erosion": 0.0,
+            "humidity": -0.7,
+            "offset": 0.0,
+            "temperature": -0.7,
+            "weirdness": 0.0
+          }
+        }
+      ]
+    },
+    "settings": "remix:sampledim"
+  }
+}

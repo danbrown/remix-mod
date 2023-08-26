@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "remix:block/jump_block"
+    }
+  }
+}
