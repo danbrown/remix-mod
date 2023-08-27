@@ -30,6 +30,10 @@ class RemixMod {
       DatagenEnchantments.register(MOD_BUS)
       DatagenSoundEvents.register(MOD_BUS)
       DatagenCarvers.register(MOD_BUS)
+      DatagenEntities.register(MOD_BUS)
+
+      // run entity renderer registration
+      MOD_BUS.addListener(DatagenEntities::registerEntityRenderers)
 
       // add items to vanilla creative tabs
       MOD_BUS.addListener(DatagenCreativeTabs::addVanillaCreativeTabs)

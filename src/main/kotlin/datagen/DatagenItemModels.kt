@@ -15,9 +15,9 @@ class DatagenItemModels(output: PackOutput?, fileHelper: ExistingFileHelper?) :
 
 
   override fun registerModels() {
+    // @ BLOCKS
     block(DatagenBlocks.ADAMANTIUM_BLOCK)
     block(DatagenBlocks.ADAMANTIUM_ORE)
-    block(DatagenBlocks.DEEPSLATE_ADAMANTIUM_ORE)
     block(DatagenBlocks.ADAMANTIUM_DEBRIS)
     blockLamp(DatagenBlocks.CORE_BLOCK)
     block(DatagenBlocks.JUMP_BLOCK)
@@ -26,5 +26,6 @@ class DatagenItemModels(output: PackOutput?, fileHelper: ExistingFileHelper?) :
     normalItem(DatagenItems.ADAMANTIUM_INGOT)
     normalItem(DatagenItems.ADAMANTIUM_FRAGMENT)
     normalItem(DatagenItems.CUSTOM_ITEM)
+    normalItem(DatagenItems.BOOMERANG)
   }
 }

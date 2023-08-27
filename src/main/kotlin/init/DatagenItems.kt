@@ -4,6 +4,7 @@ import com.dannbrown.remix.content.item.CustomItem
 import com.dannbrown.remix.lib.LibItemNames
 import com.dannbrown.remix.lib.LibUtils.defaultItemProps
 import com.dannbrown.remix.RemixMod
+import com.dannbrown.remix.content.item.BoomerangItem
 import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.Item
 import net.minecraft.world.level.block.Block
@@ -36,32 +37,23 @@ object DatagenItems {
   private fun registerBlockItems() {
     DatagenBlocks.BLOCKS.entries.forEach(Consumer { item: RegistryObject<Block> ->
       if (!DatagenBlocks.DONT_INCLUDE_BLOCK_ITEM.contains(item)) {
-        BLOCK_ITEMS.register(
-          item.id.path
-        ) { BlockItem(item.get(), defaultProps) }
+        BLOCK_ITEMS.register(item.id.path) { BlockItem(item.get(), defaultProps) }
       }
     })
   }
 
   // @ Items
   // adamantium
-  val ADAMANTIUM_INGOT = ITEMS.register(
-    LibItemNames.ADAMANTIUM_INGOT
-  ) { Item(defaultProps) }
-  val ADAMANTIUM_FRAGMENT = ITEMS.register(
-    LibItemNames.ADAMANTIUM_FRAGMENT
-  ) { Item(defaultProps) }
+  val ADAMANTIUM_INGOT = ITEMS.register(LibItemNames.ADAMANTIUM_INGOT) { Item(defaultProps) }
+  val ADAMANTIUM_FRAGMENT = ITEMS.register(LibItemNames.ADAMANTIUM_FRAGMENT) { Item(defaultProps) }
 
   // custom items
-  val CUSTOM_ITEM = ITEMS.register<Item>(
-    LibItemNames.CUSTOM_ITEM
-  ) { CustomItem(defaultProps) }
+  val CUSTOM_ITEM = ITEMS.register<Item>(LibItemNames.CUSTOM_ITEM) { CustomItem() }
+
+  // tools
+  val BOOMERANG = ITEMS.register(LibItemNames.BOOMERANG) { BoomerangItem() }
 
   // @ Blacklist for creative tab
   val DONT_INCLUDE_CREATIVE: MutableList<RegistryObject<Item>> = ArrayList()
 
-  init {
-    DONT_INCLUDE_CREATIVE.add(ADAMANTIUM_INGOT)
-    DONT_INCLUDE_CREATIVE.add(CUSTOM_ITEM)
-  }
 }

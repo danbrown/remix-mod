@@ -26,11 +26,14 @@ abstract class DatagenItemModelProvider(output: PackOutput?, fileHelper: Existin
       .texture("texture", "block/$name")
   }
 
-  fun blockLamp(block: Supplier<out Block?>): ItemModelBuilder {
+  fun blockLamp(block: Supplier<out Block?>): Pair<ItemModelBuilder, ItemModelBuilder> {
     val offName = blockName(block) + "_off"
     val onName = blockName(block) + "_on"
     val offVariant = withExistingParent(blockName(block), modLoc("block/$offName"))
-    return withExistingParent(blockName(block), modLoc("block/$onName"))
+    val onVariant =  withExistingParent(blockName(block), modLoc("block/$onName"))
+
+    // return both the off and on variants in a pair
+    return Pair(offVariant, onVariant)
   }
 
   @JvmOverloads

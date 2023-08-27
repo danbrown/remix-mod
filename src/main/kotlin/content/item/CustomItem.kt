@@ -1,5 +1,6 @@
 package com.dannbrown.remix.content.item
 
+import com.dannbrown.remix.lib.LibUtils
 import net.minecraft.ChatFormatting
 import net.minecraft.client.gui.screens.Screen
 import net.minecraft.network.chat.Component
@@ -11,7 +12,7 @@ import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.TooltipFlag
 import net.minecraft.world.level.Level
 
-class CustomItem(properties: Properties) : Item(properties) {
+class CustomItem( ) : Item(Properties().durability(100)) {
 
   //  append a tooltip to the item
   override fun appendHoverText(
@@ -29,7 +30,6 @@ class CustomItem(properties: Properties) : Item(properties) {
     super.appendHoverText(stack, level, components, tooltipFlag)
   }
 
-
   //  override the use method to output a random number in the chat
   override fun use(level: Level, player: Player, hand: InteractionHand): InteractionResultHolder<ItemStack> {
     if (!level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
@@ -37,6 +37,9 @@ class CustomItem(properties: Properties) : Item(properties) {
       outputRandomNumber(player)
       // add a cooldown to prevent spam
       player.cooldowns.addCooldown(this, 20)
+
+      // damage the item
+      LibUtils.damageItem(this, 1)
     }
     return super.use(level, player, hand)
   }

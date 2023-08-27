@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "remix:block/deepslate_adamantium_ore"
-  }
-}

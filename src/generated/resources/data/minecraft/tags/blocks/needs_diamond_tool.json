@@ -2,7 +2,6 @@
   "values": [
     "remix:adamantium_block",
     "remix:adamantium_debris",
-    "remix:adamantium_ore",
-    "remix:deepslate_adamantium_ore"
+    "remix:adamantium_ore"
   ]
 }

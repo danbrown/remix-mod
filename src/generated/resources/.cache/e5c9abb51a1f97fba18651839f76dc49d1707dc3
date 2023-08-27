@@ -1,10 +1,10 @@
-// 1.20.1	2023-08-26T04:41:37.428748	Remix Item Models
+// 1.20.1	2023-08-27T10:42:28.168889	Remix Item Models
 5add7e4b7c944ec53858e03414ffba4d50a7cca0 assets/remix/models/item/adamantium_block.json
 3ef46c44e289f1a5be8c6f4ec01e39dcb1956155 assets/remix/models/item/adamantium_debris.json
 a18714e8d401bc240e13f37a9323d3114256fdb9 assets/remix/models/item/adamantium_fragment.json
 2e46020ddd2de289345aff5ddfc1aa35c08f0175 assets/remix/models/item/adamantium_ingot.json
 f29c479838a06a04d244099dfb8ff8323393d09a assets/remix/models/item/adamantium_ore.json
+c35fa2da24d25afd7e9d0806b0243a36d7c54a8a assets/remix/models/item/boomerang.json
 23c987e05599bda077e4e5342f7f3776e50853ea assets/remix/models/item/core_block.json
 018c2a7ae450da159de2d0737f68b015f028dcf0 assets/remix/models/item/custom_item.json
-3ecc5c0bde45c1d05953eaaef33ccd3f9aab1bb0 assets/remix/models/item/deepslate_adamantium_ore.json
 c50df73773d9e4724740c6f03746aed4b5928d7c assets/remix/models/item/jump_block.json

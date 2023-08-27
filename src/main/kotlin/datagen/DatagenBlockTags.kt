@@ -15,10 +15,13 @@ import java.util.concurrent.CompletableFuture
 import java.util.function.Function
 
 class DatagenBlockTags(
-  output: PackOutput?, future: CompletableFuture<HolderLookup.Provider?>?,
-  existingFileHelper: ExistingFileHelper?
+  output: PackOutput,
+  future: CompletableFuture<HolderLookup.Provider>,
+  existingFileHelper: ExistingFileHelper
 ) : IntrinsicHolderTagsProvider<Block>(
-  output, Registries.BLOCK, future,
+  output,
+  Registries.BLOCK,
+  future,
   Function<Block, ResourceKey<Block>> { block: Block ->
     block.builtInRegistryHolder().key()
   }, RemixMod.MOD_ID,
@@ -31,10 +34,10 @@ class DatagenBlockTags(
   override fun addTags(provider: HolderLookup.Provider) {
 
     // mod forge
-    tag(DatagenTags.Blocks.ORES_ADAMANTIUM)
-      .add(DatagenBlocks.ADAMANTIUM_ORE.get(), DatagenBlocks.DEEPSLATE_ADAMANTIUM_ORE.get())
+    tag(DatagenTags.Blocks.ORES_ADAMANTIUM).add(DatagenBlocks.ADAMANTIUM_ORE.get())
     tag(DatagenTags.Blocks.STORAGE_BLOCKS_ADAMANTIUM).add(DatagenBlocks.ADAMANTIUM_BLOCK.get())
     tag(DatagenTags.Blocks.STORAGE_BLOCKS_ADAMANTIUM_DEBRIS).add(DatagenBlocks.ADAMANTIUM_DEBRIS.get())
+
 
     // vanilla
 
@@ -46,7 +49,6 @@ class DatagenBlockTags(
       DatagenBlocks.ADAMANTIUM_BLOCK.get(),
       DatagenBlocks.ADAMANTIUM_DEBRIS.get(),
       DatagenBlocks.ADAMANTIUM_ORE.get(),
-      DatagenBlocks.DEEPSLATE_ADAMANTIUM_ORE.get(),
       DatagenBlocks.CORE_BLOCK.get(),
       DatagenBlocks.JUMP_BLOCK.get()
     )
@@ -66,7 +68,6 @@ class DatagenBlockTags(
       DatagenBlocks.ADAMANTIUM_BLOCK.get(),
       DatagenBlocks.ADAMANTIUM_DEBRIS.get(),
       DatagenBlocks.ADAMANTIUM_ORE.get(),
-      DatagenBlocks.DEEPSLATE_ADAMANTIUM_ORE.get()
     )
   }
 }

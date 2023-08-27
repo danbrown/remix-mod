@@ -16,7 +16,6 @@ class DatagenBlockStates(output: PackOutput?, fileHelper: ExistingFileHelper?) :
     block(DatagenBlocks.ADAMANTIUM_BLOCK)
     block(DatagenBlocks.ADAMANTIUM_DEBRIS)
     block(DatagenBlocks.ADAMANTIUM_ORE)
-    block(DatagenBlocks.DEEPSLATE_ADAMANTIUM_ORE)
     blockLamp(DatagenBlocks.CORE_BLOCK)
     block(DatagenBlocks.JUMP_BLOCK)
   }

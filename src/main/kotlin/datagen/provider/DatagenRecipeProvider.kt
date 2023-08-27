@@ -397,7 +397,7 @@ abstract class DatagenRecipeProvider(output: PackOutput?) : RecipeProvider(outpu
       .unlockedBy("has_" + ForgeRegistries.BLOCKS.getKey(input.get()), has(input.get()))
   }
 
-  fun adamantiumStonecutting(result: ItemLike?): SingleItemRecipeBuilder {
-    return stonecutting(DatagenBlocks.ADAMANTIUM_BLOCK, result)
-  }
+//  fun adamantiumStonecutting(result: ItemLike?): SingleItemRecipeBuilder {
+//    return stonecutting(DatagenBlocks.ADAMANTIUM_BLOCK.get(), result)
+//  }
 }

@@ -17,4 +17,8 @@ object LibUtils {
   fun defaultItemProps(): Item.Properties {
     return Item.Properties()
   }
+
+  fun damageItem(item: Item, amount: Int) {
+    item.defaultInstance.hurtAndBreak(amount, null, null)
+  }
 }
