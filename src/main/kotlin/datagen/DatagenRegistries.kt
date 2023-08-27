@@ -23,13 +23,13 @@ object DatagenRegistries {
     val modIds: MutableSet<String> = HashSet()
     modIds.add("minecraft")
     modIds.add(RemixMod.MOD_ID)
+    generator.addProvider(event.includeClient(), DatagenLang(output));
     generator.addProvider(event.includeClient(), DatagenBlockStates(output, helper))
     generator.addProvider(event.includeClient(), DatagenItemModels(output, helper))
+    generator.addProvider(event.includeServer(), DatagenRecipes(output));
+//    generator.addProvider(event.includeServer(), DatagenLootTables(output));
 
-    // DatagenBlockTags blockTags = new DatagenBlockTags(output, provider, helper);
     generator.addProvider(event.includeServer(), DatagenBlockTags(output, provider, helper))
-    // generator.addProvider(event.includeServer(),
-    // new DatagenItemTags(output, provider, blockTags.contentsGetter(), helper));
     val datapackEntries = DatapackBuiltinEntriesProvider(output, provider, modIds)
     val lookupProvider = datapackEntries.registryProvider
     generator.addProvider(event.includeServer(), datapackEntries)
@@ -40,7 +40,7 @@ object DatagenRegistries {
     val registryAccess = RegistryAccess.fromRegistryOfRegistries(BuiltInRegistries.REGISTRY)
     val builder = RegistrySetBuilder()
     builder.add(Registries.DENSITY_FUNCTION) { obj -> DatagenDensityFunctions.bootstrap(obj) }
-    builder.add(Registries.BIOME){c-> DatagenBiomes.bootstrap(c)}
+    builder.add(Registries.BIOME) { c -> DatagenBiomes.bootstrap(c) }
     builder.add(Registries.CONFIGURED_FEATURE) { c -> DatagenConfiguredFeatures.bootstrap(c) }
     builder.add(Registries.CONFIGURED_CARVER) { c -> DatagenConfiguredCarvers.bootstrap(c) }
     builder.add(Registries.PLACED_FEATURE) { c -> DatagenPlacedFeatures.bootstrap(c) }

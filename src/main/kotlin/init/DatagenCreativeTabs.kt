@@ -29,12 +29,11 @@ object DatagenCreativeTabs {
   }
 
   // Creative mode tab for databox items
-  val DATABOX_TAB = TABS.register<CreativeModeTab>(
+  val REMIX_TAB = TABS.register<CreativeModeTab>(
     "examplemod_group"
   ) {
     CreativeModeTab.builder()
       .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
-      .title(Component.translatable("itemGroup.examplemod_group"))
       .icon(Supplier<ItemStack> { ItemStack(DatagenItems.ADAMANTIUM_INGOT.get()) })
       .displayItems { parameters: ItemDisplayParameters?, output: CreativeModeTab.Output ->
 

@@ -22,6 +22,13 @@ import java.util.function.Consumer
 import java.util.function.Supplier
 
 abstract class DatagenRecipeProvider(output: PackOutput?) : RecipeProvider(output) {
+  fun makeCarpet(carpetOut: Supplier<out Block?>, woolIn: Supplier<out Block?>): ShapedRecipeBuilder {
+    return ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, carpetOut.get(), 3)
+      .pattern("WW")
+      .define('W', woolIn.get())
+      .unlockedBy("has_" + ForgeRegistries.BLOCKS.getKey(woolIn.get())!!.path, has(woolIn.get()))
+  }
+
   fun makePlanks(plankOut: Supplier<out Block?>, logIn: TagKey<Item?>?): ShapelessRecipeBuilder {
     return ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, plankOut.get(), 4)
       .requires(logIn)
