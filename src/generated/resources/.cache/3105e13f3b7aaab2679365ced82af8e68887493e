@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-27T10:42:28.169906	Remix Block Tags
+// 1.20.1	2023-08-27T12:56:32.321513	Remix Block Tags
 01ae7163466c52da5377e378b050a6856d1f7a2f data/forge/tags/blocks/ores.json
 41ace2d373730566e99337d981ebfd0246c00402 data/forge/tags/blocks/ores/adamantium.json
 683ab5ca486ee9afba2b781d62d86beebda1a154 data/forge/tags/blocks/storage_blocks/adamantium.json
@@ -6,3 +6,5 @@
 0a7ff731479f7fa6ff5c42477a252b04d5b6fd4b data/minecraft/tags/blocks/mineable/pickaxe.json
 718923c8c078c34d4dd15b228bae16a46dab6245 data/minecraft/tags/blocks/needs_diamond_tool.json
 7ed5b73d9580440d9e51fdb66649ded51e72dc11 data/minecraft/tags/blocks/needs_iron_tool.json
+ae84f4034e4f128840fd484a25ee5ace798b22ac data/minecraft/tags/blocks/wool.json
+e5876778dffa34488241efe5db9ee58be52c7af1 data/minecraft/tags/blocks/wool_carpets.json

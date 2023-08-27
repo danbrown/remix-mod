@@ -33,18 +33,56 @@ class DatagenBlockTags(
 
   override fun addTags(provider: HolderLookup.Provider) {
 
-    // mod forge
+    // @ MOD FORGE
     tag(DatagenTags.Blocks.ORES_ADAMANTIUM).add(DatagenBlocks.ADAMANTIUM_ORE.get())
     tag(DatagenTags.Blocks.STORAGE_BLOCKS_ADAMANTIUM).add(DatagenBlocks.ADAMANTIUM_BLOCK.get())
     tag(DatagenTags.Blocks.STORAGE_BLOCKS_ADAMANTIUM_DEBRIS).add(DatagenBlocks.ADAMANTIUM_DEBRIS.get())
 
+    // @ VANILLA
+    // glow wool
+    tag(BlockTags.WOOL).add(
+      DatagenBlocks.GLOW_WOOL.get(),
+      DatagenBlocks.GLOW_ORANGE_WOOL.get(),
+      DatagenBlocks.GLOW_MAGENTA_WOOL.get(),
+      DatagenBlocks.GLOW_LIGHT_BLUE_WOOL.get(),
+      DatagenBlocks.GLOW_YELLOW_WOOL.get(),
+      DatagenBlocks.GLOW_LIME_WOOL.get(),
+      DatagenBlocks.GLOW_PINK_WOOL.get(),
+      DatagenBlocks.GLOW_GRAY_WOOL.get(),
+      DatagenBlocks.GLOW_LIGHT_GRAY_WOOL.get(),
+      DatagenBlocks.GLOW_CYAN_WOOL.get(),
+      DatagenBlocks.GLOW_PURPLE_WOOL.get(),
+      DatagenBlocks.GLOW_BLUE_WOOL.get(),
+      DatagenBlocks.GLOW_BROWN_WOOL.get(),
+      DatagenBlocks.GLOW_GREEN_WOOL.get(),
+      DatagenBlocks.GLOW_RED_WOOL.get(),
+      DatagenBlocks.GLOW_BLACK_WOOL.get()
+    )
 
-    // vanilla
+    // glow carpet
+    tag(BlockTags.WOOL_CARPETS).add(
+      DatagenBlocks.GLOW_CARPET.get(),
+      DatagenBlocks.GLOW_ORANGE_CARPET.get(),
+      DatagenBlocks.GLOW_MAGENTA_CARPET.get(),
+      DatagenBlocks.GLOW_LIGHT_BLUE_CARPET.get(),
+      DatagenBlocks.GLOW_YELLOW_CARPET.get(),
+      DatagenBlocks.GLOW_LIME_CARPET.get(),
+      DatagenBlocks.GLOW_PINK_CARPET.get(),
+      DatagenBlocks.GLOW_GRAY_CARPET.get(),
+      DatagenBlocks.GLOW_LIGHT_GRAY_CARPET.get(),
+      DatagenBlocks.GLOW_CYAN_CARPET.get(),
+      DatagenBlocks.GLOW_PURPLE_CARPET.get(),
+      DatagenBlocks.GLOW_BLUE_CARPET.get(),
+      DatagenBlocks.GLOW_BROWN_CARPET.get(),
+      DatagenBlocks.GLOW_GREEN_CARPET.get(),
+      DatagenBlocks.GLOW_RED_CARPET.get(),
+      DatagenBlocks.GLOW_BLACK_CARPET.get()
+    )
 
-    // forge
+    // @ FORGE
     tag(Tags.Blocks.ORES).addTags(DatagenTags.Blocks.ORES_ADAMANTIUM)
 
-    // huge mineables lists!
+    // mineables lists
     tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
       DatagenBlocks.ADAMANTIUM_BLOCK.get(),
       DatagenBlocks.ADAMANTIUM_DEBRIS.get(),

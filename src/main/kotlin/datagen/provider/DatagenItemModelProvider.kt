@@ -30,7 +30,7 @@ abstract class DatagenItemModelProvider(output: PackOutput?, fileHelper: Existin
     val offName = blockName(block) + "_off"
     val onName = blockName(block) + "_on"
     val offVariant = withExistingParent(blockName(block), modLoc("block/$offName"))
-    val onVariant =  withExistingParent(blockName(block), modLoc("block/$onName"))
+    val onVariant = withExistingParent(blockName(block), modLoc("block/$onName"))
 
     // return both the off and on variants in a pair
     return Pair(offVariant, onVariant)
@@ -40,6 +40,15 @@ abstract class DatagenItemModelProvider(output: PackOutput?, fileHelper: Existin
   fun block(block: Supplier<out Block?>, name: String = blockName(block)): ItemModelBuilder {
     return withExistingParent(blockName(block), modLoc("block/$name"))
   }
+
+  fun blockVanilla(block: Supplier<out Block?>, name: String): ItemModelBuilder {
+    return withExistingParent(blockName(block), "minecraft:block/$name")
+  }
+
+//  fun carpetVanilla(block: Supplier<out Block?>, name: String): ItemModelBuilder {
+//    return carpet(blockName(block), ResourceLocation("minecraft", "block/$name"))
+//  }
+
 
   fun blockFlat(block: Supplier<out Block?>) {
     withExistingParent(blockName(block), mcLoc("item/generated"))

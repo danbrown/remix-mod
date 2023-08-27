@@ -7,7 +7,9 @@
   "mixins": [
     "ExampleMixin",
     "EntityMixin",
-    "ThrownTridentMixin"
+    "ThrownTridentMixin",
+    "GlowInkSacItemMixin",
+    "PotionItemMixin"
   ],
   "client": [],
   "injectors": {

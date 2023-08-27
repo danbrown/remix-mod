@@ -27,14 +27,16 @@ abstract class DatagenBlockstateProvider(output: PackOutput?, helper: ExistingFi
     simpleBlock(block.get())
   }
 
-  fun blockLamp(block: Supplier<out Block?>) {
+  fun blockVanilla(block: Supplier<out Block?>, vanillaName: String) {
+    simpleBlock(block.get(), models().cubeAll(name(block), ResourceLocation("minecraft", "block/$vanillaName")))
+  }
 
-    // {
-    // "variants": {
-    // "lit=true": { "model": "databox:block/core_block_on" },
-    // "lit=false": { "model": "databox:block/core_block_off" }
-    // }
-    // }
+  fun carpetVanilla(block: Supplier<out Block?>, vanillaName: String) {
+    simpleBlock(block.get(), models().carpet(name(block), ResourceLocation("minecraft", "block/$vanillaName")))
+  }
+
+
+  fun blockLamp(block: Supplier<out Block?>) {
     getVariantBuilder(block.get()).forAllStates { state: BlockState ->
       val lit = state.getValue(BlockStateProperties.LIT)
       ConfiguredModel.builder()

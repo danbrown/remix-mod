@@ -28,7 +28,7 @@ class DatagenItemTags(
 
   override fun addTags(provider: HolderLookup.Provider) {
 
-    // modded forge
+    // @ MODDED FORGE
     tag(DatagenTags.Items.RAW_MATERIALS_ADADMANTIUM).add(DatagenItems.ADAMANTIUM_FRAGMENT.get())
     tag(DatagenTags.Items.INGOTS_ADAMANTIUM).add(DatagenItems.ADAMANTIUM_INGOT.get())
     copy(DatagenTags.Blocks.ORES_ADAMANTIUM, DatagenTags.Items.ORES_ADAMANTIUM)
