@@ -5,4 +5,5 @@ object LibItemNames {
   const val ADAMANTIUM_FRAGMENT = "adamantium_fragment"
   const val CUSTOM_ITEM = "custom_item"
   const val BOOMERANG = "boomerang"
+  const val CHALK = "chalk"
 }

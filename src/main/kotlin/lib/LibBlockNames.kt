@@ -43,4 +43,7 @@ object LibBlockNames {
   const val GLOW_GREEN_CARPET = "glow_green_carpet"
   const val GLOW_RED_CARPET = "glow_red_carpet"
   const val GLOW_BLACK_CARPET = "glow_black_carpet"
+
+  // chalk
+  const val CHALK_DUST = "chalk_dust"
 }

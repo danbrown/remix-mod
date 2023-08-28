@@ -1,16 +1,21 @@
 package com.dannbrown.remix.datagen.provider
 
 import com.dannbrown.remix.RemixMod
+import com.google.common.collect.ImmutableMap
+import com.google.common.collect.Maps
+import net.minecraft.Util
+import net.minecraft.core.Direction
 import net.minecraft.data.PackOutput
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.level.block.*
 import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.level.block.state.properties.BlockStateProperties
-import net.minecraftforge.client.model.generators.BlockStateProvider
-import net.minecraftforge.client.model.generators.ConfiguredModel
-import net.minecraftforge.client.model.generators.ModelFile
+import net.minecraft.world.level.block.state.properties.BooleanProperty
+import net.minecraftforge.client.model.generators.*
 import net.minecraftforge.common.data.ExistingFileHelper
 import net.minecraftforge.registries.ForgeRegistries
+import java.util.*
+import java.util.function.Consumer
 import java.util.function.Supplier
 
 abstract class DatagenBlockstateProvider(output: PackOutput?, helper: ExistingFileHelper?) :
@@ -49,6 +54,140 @@ abstract class DatagenBlockstateProvider(output: PackOutput?, helper: ExistingFi
         .build()
     }
   }
+
+
+  fun multifaceBlock(block: Supplier<out Block?>, model: ModelFile) {
+    val builder = getMultipartBuilder(block.get())
+      // north
+      .part().modelFile(model)
+      .addModel()
+      .condition(BlockStateProperties.NORTH, true)
+      .end()
+      // east
+      .part().modelFile(model)
+      .addModel()
+      .condition(BlockStateProperties.DOWN, false)
+      .condition(BlockStateProperties.EAST, false)
+      .condition(BlockStateProperties.NORTH, false)
+      .condition(BlockStateProperties.SOUTH, false)
+      .condition(BlockStateProperties.UP, false)
+      .condition(BlockStateProperties.WEST, false)
+      .end()
+      // east
+      .part().modelFile(model)
+      .rotationY(90)
+      .uvLock(true)
+      .addModel()
+      .condition(BlockStateProperties.EAST, true)
+      .end()
+      // east
+      .part().modelFile(model)
+      .rotationY(90)
+      .uvLock(true)
+      .addModel()
+      .condition(BlockStateProperties.DOWN, false)
+      .condition(BlockStateProperties.EAST, false)
+      .condition(BlockStateProperties.NORTH, false)
+      .condition(BlockStateProperties.SOUTH, false)
+      .condition(BlockStateProperties.UP, false)
+      .condition(BlockStateProperties.WEST, false)
+      .end()
+      // south
+      .part().modelFile(model)
+      .rotationY(180)
+      .uvLock(true)
+      .addModel()
+      .condition(BlockStateProperties.SOUTH, true)
+      .end()
+      // south
+      .part().modelFile(model)
+      .rotationY(180)
+      .uvLock(true)
+      .addModel()
+      .condition(BlockStateProperties.DOWN, false)
+      .condition(BlockStateProperties.EAST, false)
+      .condition(BlockStateProperties.NORTH, false)
+      .condition(BlockStateProperties.SOUTH, false)
+      .condition(BlockStateProperties.UP, false)
+      .condition(BlockStateProperties.WEST, false)
+      .end()
+      // west
+      .part().modelFile(model)
+      .rotationY(270)
+      .uvLock(true)
+      .addModel()
+      .condition(BlockStateProperties.WEST, true)
+      .end()
+      // west
+      .part().modelFile(model)
+      .rotationY(270)
+      .uvLock(true)
+      .addModel()
+      .condition(BlockStateProperties.DOWN, false)
+      .condition(BlockStateProperties.EAST, false)
+      .condition(BlockStateProperties.NORTH, false)
+      .condition(BlockStateProperties.SOUTH, false)
+      .condition(BlockStateProperties.UP, false)
+      .condition(BlockStateProperties.WEST, false)
+      .end()
+      // up
+      .part().modelFile(model)
+      .rotationX(270)
+      .uvLock(true)
+      .addModel()
+      .condition(BlockStateProperties.UP, true)
+      .end()
+      // up
+      .part().modelFile(model)
+      .rotationX(270)
+      .uvLock(true)
+      .addModel()
+      .condition(BlockStateProperties.DOWN, false)
+      .condition(BlockStateProperties.EAST, false)
+      .condition(BlockStateProperties.NORTH, false)
+      .condition(BlockStateProperties.SOUTH, false)
+      .condition(BlockStateProperties.UP, false)
+      .condition(BlockStateProperties.WEST, false)
+      .end()
+      // down
+      .part().modelFile(model)
+      .rotationX(90)
+      .uvLock(true)
+      .addModel()
+      .condition(BlockStateProperties.DOWN, true)
+      .end()
+      // down
+      .part().modelFile(model)
+      .rotationX(90)
+      .uvLock(true)
+      .addModel()
+      .condition(BlockStateProperties.DOWN, false)
+      .condition(BlockStateProperties.EAST, false)
+      .condition(BlockStateProperties.NORTH, false)
+      .condition(BlockStateProperties.SOUTH, false)
+      .condition(BlockStateProperties.UP, false)
+      .condition(BlockStateProperties.WEST, false)
+      .end()
+  }
+
+  fun lichen(block: Supplier<out Block?>) {
+    val lmodel: ModelFile = models().getBuilder(name(block))
+      // texture
+      .texture("particle", modLoc("block/${name(block)}"))
+      .texture(name(block), modLoc("block/${name(block)}"))
+      // texture elements
+      .element()
+      .from(0f, 0f, 0.1f)
+      .to(16f, 16f, 0.1f)
+      .face(Direction.NORTH).uvs(16f, 0f, 0f, 16f).texture("#${name(block)}").end()
+      .face(Direction.SOUTH).uvs(0f, 0f, 16f, 16f).texture("#${name(block)}").end()
+      .end()
+      // transparent elements
+      .renderType("translucent")
+
+    multifaceBlock(block, lmodel)
+  }
+
 
   fun blockTranslucent(block: Supplier<out Block?>) {
     simpleBlock(block.get(), models().cubeAll(name(block), blockTexture(block.get())).renderType("translucent"))

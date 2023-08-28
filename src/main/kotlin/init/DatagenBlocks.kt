@@ -100,11 +100,13 @@ object DatagenBlocks {
   val GLOW_BLACK_CARPET =
     BLOCKS.register(LibBlockNames.GLOW_BLACK_CARPET) { GlowCarpetBlock(MapColor.COLOR_BLACK, DyeColor.BLACK) }
 
+  // chalk
+  val CHALK_DUST = BLOCKS.register(LibBlockNames.CHALK_DUST) { ChalkDustBlock() }
 
   // @ Blacklist for block items, it will not register a block item for these
   // blocks
-  val DONT_INCLUDE_BLOCK_ITEM: List<RegistryObject<Block>> = mutableListOf()
+  val DONT_INCLUDE_BLOCK_ITEM: List<RegistryObject<*>> = mutableListOf()
 
   // @ Blacklist for creative tab, block item may still be registered
-  val DONT_INCLUDE_CREATIVE: List<RegistryObject<Block>> = mutableListOf()
+  val DONT_INCLUDE_CREATIVE: List<RegistryObject<*>> = mutableListOf()
 }

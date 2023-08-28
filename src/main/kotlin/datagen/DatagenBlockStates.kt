@@ -54,5 +54,8 @@ class DatagenBlockStates(output: PackOutput?, fileHelper: ExistingFileHelper?) :
     carpetVanilla(DatagenBlocks.GLOW_GREEN_CARPET, "green_wool")
     carpetVanilla(DatagenBlocks.GLOW_RED_CARPET, "red_wool")
     carpetVanilla(DatagenBlocks.GLOW_BLACK_CARPET, "black_wool")
+    
+    // chalk
+    lichen(DatagenBlocks.CHALK_DUST)
   }
 }

@@ -63,5 +63,6 @@ class DatagenItemModels(output: PackOutput?, fileHelper: ExistingFileHelper?) :
     normalItem(DatagenItems.ADAMANTIUM_FRAGMENT)
     normalItem(DatagenItems.CUSTOM_ITEM)
     normalItem(DatagenItems.BOOMERANG)
+    normalItem(DatagenItems.CHALK)
   }
 }

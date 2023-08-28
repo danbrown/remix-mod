@@ -1,7 +1,8 @@
-// 1.20.1	2023-08-27T13:13:48.150441	Remix Block States
+// 1.20.1	2023-08-28T04:35:33.874149	Remix Block States
 81a87a1a16a7f2e83d5896ddaeb801bb80c09372 assets/remix/blockstates/adamantium_block.json
 d740e81b43a74e7c42993b088eb581462d7b66f5 assets/remix/blockstates/adamantium_debris.json
 cec6f16b17c8d9ce86aaf155b527b61dbf028c9b assets/remix/blockstates/adamantium_ore.json
+2c4147f4bd6ecdf1d4fd18ecf792a5209fbff2ca assets/remix/blockstates/chalk_dust.json
 b923f643c8449e0a369f80606a8174e6e13e6e77 assets/remix/blockstates/core_block.json
 86b584d1f44ca0d0d0289f7248f89740a0f95b9d assets/remix/blockstates/glow_black_carpet.json
 29836cc16328770b9d4f47d7a39d1fa78d15471c assets/remix/blockstates/glow_black_wool.json
@@ -39,6 +40,7 @@ ff3f0afa63b07148b7cd94ce469d444fb656e962 assets/remix/blockstates/jump_block.jso
 b6d331abecf5cab9d35442e95cf6974e6a0d434b assets/remix/models/block/adamantium_block.json
 9920c547662fc0d86d9cf9d234fea7bade034669 assets/remix/models/block/adamantium_debris.json
 e7fd777293113ea357bdf9b6ccdd902a613b49f0 assets/remix/models/block/adamantium_ore.json
+abe2d6611951b61fd8bd57fcaa761dd84704cbd7 assets/remix/models/block/chalk_dust.json
 0e59ce58f97af2cde57fc41c381cbfebae88fac0 assets/remix/models/block/core_block_off.json
 61b0ede7f24e4943fbae4a35bd26fbb51a7346ac assets/remix/models/block/core_block_on.json
 c9e5c781acf418c556f3a144c823df1655fa5433 assets/remix/models/block/glow_black_carpet.json

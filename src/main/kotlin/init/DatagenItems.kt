@@ -5,6 +5,7 @@ import com.dannbrown.remix.lib.LibItemNames
 import com.dannbrown.remix.lib.LibUtils.defaultItemProps
 import com.dannbrown.remix.RemixMod
 import com.dannbrown.remix.content.item.BoomerangItem
+import com.dannbrown.remix.content.item.ChalkItem
 import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.Item
 import net.minecraft.world.level.block.Block
@@ -52,6 +53,9 @@ object DatagenItems {
 
   // tools
   val BOOMERANG = ITEMS.register(LibItemNames.BOOMERANG) { BoomerangItem() }
+
+  // chalk
+  val CHALK = ITEMS.register(LibItemNames.CHALK) { ChalkItem() }
 
   // @ Blacklist for creative tab
   val DONT_INCLUDE_CREATIVE: MutableList<RegistryObject<Item>> = ArrayList()
